@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <title>VEASNA</title>
+</head>
+<style>
+    body {
+        margin: 0;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 90vh;
+    }
+
+    .container {
+        background-color: rgb(255, 237, 240);
+        padding: 1rem;
+        border-radius: 10px;
+        width: 410px;
+    }
+
+    h2 {
+        display: block;
+        font-size: 1.5em;
+        margin-block-start: 0.83em;
+        margin-block-end: 0.83em;
+        margin-inline-start: 0px;
+        margin-inline-end: 0px;
+        font-weight: bold;
+    }
+
+    .btn {
+        padding: 0.5rem 2rem;
+        border: none;
+        outline: none;
+        font-weight: bold;
+        border-radius: 10px;
+        cursor: pointer;
+        transition: all 0.3s ease;
+    }
+
+    .moving {
+        margin-left: 230px;
+    }
+
+    .btn-secondary {
+        padding: 0.5rem 1rem;
+    }
+</style>
+
+<body>
+    <section class="container">
+        <h2 class="text">ឈប់ស្រលាញ់គេម្នាក់ឯងទៀតទៅ😊</h2>
+        <button class="btn btn-info">Yes</button>
+        <button class="btn btn-secondary moving">No</button>
+    </section>
+    <script>
+        const btnYes = document.querySelector('.btn.btn-info');
+        const btnNo = document.querySelector('.btn.btn-secondary.moving');
+        const text = document.querySelector('.text');
+
+        btnYes.addEventListener('click', () => {
+            text.innerHTML = "ឈប់ស្រលាញ់គេម្នាក់ឯងទៀតទៅ😊";
+        });
+        btnNo.addEventListener("mouseenter", () => {
+            btnNo.classList.toggle("moving");
+        })
+    </script>
+</body>
+
+</html>
